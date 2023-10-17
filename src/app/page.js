@@ -119,6 +119,11 @@ export default function Home() {
                     return false;
                   }
 
+                  if (temp.some((t) => t.phone === phone)) {
+                    alert("이미 제출한 이력이 존재해서, 제출할 수 없어요 🥲");
+                    return false;
+                  }
+
                   if (guess.length <= 1) {
                     alert("정답을 2글자 이상 입력해주세요.");
                     return false;
